@@ -1,0 +1,103 @@
+public class Carro extends Veiculo {
+    public Carro(String marca, String modelo, int anoFabricacao, String cor, String vin) {
+        super(marca, modelo, anoFabricacao, cor, vin);
+    }
+
+    @Override
+    public void mover() {
+        System.out.println("O carro está dirigindo.");
+    }
+}
+
+public class Moto extends Veiculo {
+    public Moto(String marca, String modelo, int anoFabricacao, String cor, String vin) {
+        super(marca, modelo, anoFabricacao, cor, vin);
+    }
+
+    @Override
+    public void mover() {
+        System.out.println("A moto está acelerando.");
+    }
+}
+
+public class Caminhao extends Veiculo {
+    public Caminhao(String marca, String modelo, int anoFabricacao, String cor, String vin) {
+        super(marca, modelo, anoFabricacao, cor, vin);
+    }
+
+    @Override
+    public void mover() {
+        System.out.println("O caminhão está transportando carga.");
+    }
+}
+
+
+public abstract class Veiculo {
+    private String marca;
+    private String modelo;
+    private int anoFabricacao;
+    private String cor;
+    private String vin;
+
+    public Veiculo(String marca, String modelo, int anoFabricacao, String cor, String vin) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anoFabricacao = anoFabricacao;
+        this.cor = cor;
+        this.vin = vin;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAnoFabricacao() {
+        return anoFabricacao;
+    }
+
+    public void setAnoFabricacao(int anoFabricacao) {
+        this.anoFabricacao = anoFabricacao;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getVin() {
+        return vin;
+    }
+
+    public void setVin(String vin
+
+public class Main {
+    public static void main(String[] args) {
+        Carro carro = new Carro("Toyota", "Corolla", 2022, "Preto", "123ABC456DEF");
+        Moto moto = new Moto("Honda", "CB500", 2021, "Vermelho", "789GHI012JKL");
+        Caminhao caminhao = new Caminhao("Volvo", "FH16", 2020, "Branco", "345MNO678PQR");
+
+        carro.exibirInformacoes();
+        carro.mover();
+
+        moto.exibirInformacoes();
+        moto.mover();
+
+        caminhao.exibirInformacoes();
+        caminhao.mover();
+    }
+}
